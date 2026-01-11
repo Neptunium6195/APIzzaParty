@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://mp67uaabbhik"]
+
+[ext_resource type="Script" uid="uid://dii83su7qngi5" path="res://Agify.gd" id="1_25qkq"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_25qkq")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
