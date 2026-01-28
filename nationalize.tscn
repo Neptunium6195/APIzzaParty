@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://xxymgahi8xl1"]
+
+[ext_resource type="Script" uid="uid://dsqflek22t87q" path="res://nationalize.gd" id="1_631kc"]
+
+[node name="Nationalize" type="Node2D"]
+visible = false
+script = ExtResource("1_631kc")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
