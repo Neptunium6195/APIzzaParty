@@ -7,5 +7,5 @@ elif {predictedAge} >= 30.0:
 	Did you finish your taxes yet?
 elif {predictedAge} >= 20.0:
 	Are you in your prime?
-else {predictedAge}:
+else:
 	Enjoy your youth...

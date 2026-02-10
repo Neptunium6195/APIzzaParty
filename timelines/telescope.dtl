@@ -1,0 +1,7 @@
+join  center
+[background arg="res://assets/backgrounds/black.png" fade="0.0"]
+What will we see today!
+[background arg="res://assets/backgrounds/black.png" fade="2.0"]
+Wow!
+<Empty Text Event>
+[end_timeline]

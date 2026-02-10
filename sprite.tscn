@@ -35,6 +35,7 @@ radius = 69.0
 height = 212.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_85fgi")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
@@ -46,8 +47,8 @@ animation = &"new_animation"
 frame_progress = 0.3930962
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(283, 544)
+position = Vector2(283, 551)
 shape = SubResource("CapsuleShape2D_7sx8j")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(575, 326)
+position = Vector2(577, 324)
