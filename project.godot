@@ -28,17 +28,20 @@ directories/dtl_directory={
 "agify": "res://timelines/agify.dtl",
 "agify2": "res://agify2.dtl",
 "nationalize": "res://timelines/nationalize.dtl",
-"telescope": "res://timelines/telescope.dtl"
+"telescope": "res://timelines/telescope.dtl",
+"telescope2": "res://telescope2.dtl"
 }
 layout/style_directory={
 "": "res://main.tres",
 "main": "res://main.tres"
 }
 variables={
-"lastName": "hello",
-"name": "hello",
+"lastName": "n/a",
+"name": "n/a",
 "predictedAge": 0,
-"predictedNationality": "American"
+"predictedNationality": "n/a",
+"telescopeDescription": "n/a",
+"telescopeTitle": "n/a"
 }
 layout/style_list=["res://main.tres"]
 layout/default_style="res://main.tres"

@@ -1,12 +1,64 @@
-[gd_scene load_steps=2 format=3 uid="uid://mp67uaabbhik"]
+[gd_scene load_steps=7 format=3 uid="uid://yjauau81ja4g"]
 
-[ext_resource type="Script" uid="uid://dii83su7qngi5" path="res://Agify.gd" id="1_25qkq"]
+[ext_resource type="Script" uid="uid://dii83su7qngi5" path="res://Agify.gd" id="1_udd8w"]
+[ext_resource type="FontFile" uid="uid://s226gfh7qtp0" path="res://assets/Minecraft.ttf" id="2_gb3n8"]
+[ext_resource type="FontFile" uid="uid://c4v3n1ogf7nxd" path="res://assets/rainyhearts.ttf" id="3_k8t5x"]
+[ext_resource type="Script" uid="uid://bns7skv17y1kf" path="res://button.gd" id="4_ubxqs"]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_25qkq")
+[sub_resource type="LabelSettings" id="LabelSettings_k8t5x"]
+font = ExtResource("2_gb3n8")
+font_size = 32
+
+[sub_resource type="Theme" id="Theme_ubxqs"]
+default_font = ExtResource("3_k8t5x")
+default_font_size = 32
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_udd8w")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_k8t5x")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_top = -98.0
+offset_right = 62.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_ubxqs")
+theme_override_colors/icon_normal_color = Color(0.9999978, 0.5677912, 0.50175947, 1)
+theme_override_colors/icon_focus_color = Color(0.93333334, 0.49803922, 0.26666668, 1)
+theme_override_colors/icon_hover_color = Color(0.98585314, 0.7308872, 0.69381684, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.9843137, 0.7294118, 0.69411767, 1)
+text = "Back to Arcade >"
+script = ExtResource("4_ubxqs")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

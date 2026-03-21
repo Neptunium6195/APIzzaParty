@@ -1,5 +1,3 @@
-res://timelines/telescope.dtl
-res://sprite.tscn
 res://main.tres
-res://telescope.tscn
-res://telescope.gd
+res://user.gd
+res://user.tscn

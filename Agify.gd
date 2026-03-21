@@ -2,6 +2,7 @@ extends Node
 
 @onready var ageLabel: Label = $Label
 @onready var http := $HTTPRequest
+@onready var btn := $Button
 func _ready():
 	# Connect the completion signal
 	http.request_completed.connect(_on_request_completed)
@@ -33,11 +34,14 @@ func _on_request_completed(result: int, response_code: int, headers: PackedStrin
 	Dialogic.VAR.predictedAge = json["age"]
 	ageLabel.text = "Your age based off of your name: " + str(Dialogic.VAR.predictedAge)
 	Dialogic.start("agify2")
+	btn.show()
+	
 	# Example: using JSON results
 	print("Name:", json["name"])
 	print("Predicted Age:", json["age"])
 	print("Sample Size:", json["count"])
 	
+
 
 	# Use it in your game however you want
 	# e.g. update UI, game logic, etc.

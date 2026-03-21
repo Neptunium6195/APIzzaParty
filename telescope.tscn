@@ -20,11 +20,13 @@ stretch_mode = 5
 
 [node name="Button" type="Button" parent="."]
 visible = false
-offset_left = 137.0
-offset_top = 182.0
-offset_right = 297.0
-offset_bottom = 207.0
+offset_left = -13.0
+offset_top = -6.0
+offset_right = 1232.0
+offset_bottom = 688.0
 
 [node name="ApiRequest" type="HTTPRequest" parent="."]
 
 [node name="ImageRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

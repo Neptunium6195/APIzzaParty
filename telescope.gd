@@ -4,17 +4,14 @@ extends Node2D
 @onready var imageRequest: HTTPRequest = $ImageRequest
 @onready var textureRect: TextureRect = $TextureRect
 
-var title := ""
-var description := ""
 const APOD := "https://api.nasa.gov/planetary/apod?api_key=R9v0PFv21uezfU1vz31VDCIifqdeENwfM08Go41N"
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready():
 	apiRequest.request_completed.connect(getAPI)
-	Dialogic.start("telescope")
 	imageRequest.request_completed.connect(getImage)
-	pass # Replace with function body.
-	
+	apiRequest.request(APOD)
+
 func getAPI(result, code, headers, body):
 	if code != 200:
 		push_error("NASA API failed")
@@ -24,8 +21,17 @@ func getAPI(result, code, headers, body):
 
 	if data["media_type"] != "image":
 		return  
-
+		
+	Dialogic.VAR.telescopeTitle = data["title"]
+	Dialogic.VAR.telescopeDescription = data["explanation"]
 	imageRequest.request(data["url"])
+	Dialogic.start("telescope")
+	await Dialogic.timeline_ended
+	
+	Dialogic.start("telescope2")
+	await Dialogic.timeline_ended
+	get_tree().change_scene_to_file("res://arcade.tscn")
+	
 
 func getImage(result, code, headers, body):
 	var image = Image.new()
@@ -36,5 +42,4 @@ func getImage(result, code, headers, body):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	apiRequest.request(APOD)
 	pass

@@ -6,12 +6,14 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
 
 
-func _on_button_down() -> void:
+func _on_pressed() -> void:
+	Dialogic.start("telescope2")
+	await Dialogic.timeline_ended
 	get_tree().change_scene_to_file("res://arcade.tscn")
 	pass # Replace with function body.
