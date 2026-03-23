@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774121241
+::res://::1774195228
 agify2.dtl::Resource/DialogicTimeline::2666476792037235482::1770542016::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::
 Agify.gd::GDScript::7739342462998894894::1773430203::0::1::::<>Node<><>0<>0<><>::
 Agify.tscn::PackedScene::1703147395407969896::1773430203::0::1::::<><><>0<>0<><>::uid://dii83su7qngi5::::res://Agify.gd<>uid://s226gfh7qtp0::::res://assets/Minecraft.ttf<>uid://c4v3n1ogf7nxd::::res://assets/rainyhearts.ttf<>uid://bns7skv17y1kf::::res://button.gd
@@ -8,9 +8,9 @@ button.gd::GDScript::3338010097518864641::1773430191::0::1::::<>Button<><>0<>0<>
 gallery.gd::GDScript::3575364857336045881::1770597438::0::1::::<>Node2D<><>0<>0<><>::
 help.gd::GDScript::277518132801989567::1769593306::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D::7345899325658255867::1767579936::1767580102::1::::<><><>0<>0<>2f599f1ed76190690bd7588375c75010<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-main.tres::Resource/DialogicStyle::2059434699781318142::1773424535::0::1::::<><><>0<>0<><>::uid://cqpb3ie51rwl5::::res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn<>uid://bwg6yncmh2cml::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cy1y14inwkplb::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://bquja8jyk8kbr::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dv08k6ljua6fm::::res://addons/dialogic/Resources/dialogic_style.gd
-nationalize.gd::GDScript::8456014736130696956::1769021634::0::1::::<>Node<><>0<>0<><>::
-nationalize.tscn::PackedScene::1663303044841537108::1769024775::0::1::::<><><>0<>0<><>::uid://dsqflek22t87q::::res://nationalize.gd
+main.tres::Resource/DialogicStyle::2059434699781318142::1774152878::0::1::::<><><>0<>0<><>::uid://cqpb3ie51rwl5::::res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn<>uid://bwg6yncmh2cml::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://c1k5m0w3r40xf::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn<>uid://cy1y14inwkplb::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn<>uid://cn674foxwedqu::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn<>uid://bquja8jyk8kbr::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dv08k6ljua6fm::::res://addons/dialogic/Resources/dialogic_style.gd
+nationalize.gd::GDScript::8456014736130696956::1774194800::0::1::::<>Node<><>0<>0<><>::
+nationalize.tscn::PackedScene::1663303044841537108::1774194800::0::1::::<><><>0<>0<><>::uid://dsqflek22t87q::::res://nationalize.gd
 pets.tscn::PackedScene::991030896502295727::1770597496::0::1::::<><><>0<>0<><>::uid://bq660b1qo62wj::::res://gallery.gd
 README.md::TextFile::-1::1767580027::0::1::::<><><>0<>0<><>::
 sprite.gd::GDScript::2142513371151069055::1769567383::0::1::::<>CharacterBody2D<><>0<>0<><>::
@@ -20,6 +20,8 @@ telescope.gd::GDScript::6546129602883544982::1770718503::0::1::::<>Node2D<><>0<>
 telescope.tscn::PackedScene::4024816124815177649::1770718590::0::1::::<><><>0<>0<><>::uid://c0i82ew2it72i::::res://telescope.gd
 telescpoeButton.gd::GDScript::1501897626707005054::1770718414::0::1::::<>Button<><>0<>0<><>::
 Test.tscn::PackedScene::-1::1769592495::0::1::::<><><>0<>0<><>::
+user.gd::GDScript::7268103702472456745::1774123820::0::1::::<>Control<><>0<>0<><>::
+user.tscn::PackedScene::7650119477247758073::1774123820::0::1::::<><><>0<>0<><>::uid://dbsyuuwasuknh::::res://user.gd<>uid://c4v3n1ogf7nxd::::res://assets/rainyhearts.ttf
 ::res://addons/::1769592495
 ::res://addons/dialogic/::1759166908
 plugin.cfg::TextFile::-1::1759166908::0::1::::<><><>0<>0<><>::

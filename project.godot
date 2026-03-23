@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="APIzzaParty"
-run/main_scene="uid://mp67uaabbhik"
+run/main_scene="uid://xxymgahi8xl1"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -36,10 +36,12 @@ layout/style_directory={
 "main": "res://main.tres"
 }
 variables={
+"countryCode": "n/a",
 "lastName": "n/a",
 "name": "n/a",
 "predictedAge": 0,
 "predictedNationality": "n/a",
+"probability": 0,
 "telescopeDescription": "n/a",
 "telescopeTitle": "n/a"
 }
