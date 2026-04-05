@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://b784e33amhnjb"]
+
+[ext_resource type="Script" uid="uid://bq660b1qo62wj" path="res://gallery.gd" id="1_34gfr"]
+[ext_resource type="Texture2D" uid="uid://c5i4yeufyky20" path="res://assets/backgrounds/petBg.png" id="2_xibd0"]
+[ext_resource type="FontFile" uid="uid://c4v3n1ogf7nxd" path="res://assets/rainyhearts.ttf" id="3_j8hq5"]
+[ext_resource type="Script" uid="uid://d0xuqs0sllqb5" path="res://button_2.gd" id="3_s0gbd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bqq7"]
+bg_color = Color(0.9490196, 0.4117647, 0.46666667, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_34gfr")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_right = 1158.0
+offset_bottom = 645.0
+texture = ExtResource("2_xibd0")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 428.0
+offset_top = 506.0
+offset_right = 688.0
+offset_bottom = 566.0
+theme_override_fonts/font = ExtResource("3_j8hq5")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_5bqq7")
+text = "Back to Arcade >"
+script = ExtResource("3_s0gbd")
+
+[node name="ApiRequest" type="HTTPRequest" parent="."]
+
+[node name="ImageRequest" type="HTTPRequest" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 356.0
+offset_top = 96.0
+offset_right = 736.0
+offset_bottom = 480.0
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="button_down" from="Button2" to="Button2" method="_on_button_down"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

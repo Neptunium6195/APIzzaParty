@@ -5,11 +5,11 @@ extends Control
 @onready var user_info: Label = $UserInfo
 @onready var user_image: TextureRect = $UserImage
 
-const API_URL := "https://randomuser.me/api/"
 
 var image_url := ""
 
 func _ready():
+
 	api_request.request_completed.connect(_on_api_done)
 	image_request.request_completed.connect(_on_image_done)
 	
@@ -46,4 +46,15 @@ func _on_image_done(result, code, headers, body):
 
 
 func _on_button_button_down() -> void:
-	api_request.request(API_URL)
+	var API_URL = "https://randomuser.me/api/"
+	var url = "https://randomuser.me/api/"
+	if Dialogic.VAR.predictedNationality == null:
+		url = API_URL
+	else:
+		API_URL = "https://randomuser.me/api/?nat=%s"
+		url = API_URL % Dialogic.VAR.countryCode
+	api_request.request(url)
+
+
+func _on_button_2_button_down() -> void:
+	pass # Replace with function body.

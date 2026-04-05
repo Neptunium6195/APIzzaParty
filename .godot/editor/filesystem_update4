@@ -1,3 +1,7 @@
-res://nationalize.tscn
+res://yt.tscn
 res://main.tres
-res://nationalize.gd
+res://ytbtn.gd
+res://button_2.gd
+res://arcade.tscn
+res://sprite.tscn
+res://sprite.gd

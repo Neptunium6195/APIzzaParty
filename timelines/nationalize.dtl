@@ -1,3 +1,4 @@
-What is your last name?
+join Pumpkitty right
+Pumpkitty: What is your last name?
 [text_input text="" var="lastName"]
 [end_timeline]

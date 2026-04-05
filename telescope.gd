@@ -3,6 +3,7 @@ extends Node2D
 @onready var apiRequest: HTTPRequest = $ApiRequest
 @onready var imageRequest: HTTPRequest = $ImageRequest
 @onready var textureRect: TextureRect = $TextureRect
+@onready var imgLbl: Label = $Label
 
 const APOD := "https://api.nasa.gov/planetary/apod?api_key=R9v0PFv21uezfU1vz31VDCIifqdeENwfM08Go41N"
 
@@ -20,6 +21,8 @@ func getAPI(result, code, headers, body):
 	var data = JSON.parse_string(body.get_string_from_utf8())
 
 	if data["media_type"] != "image":
+		print("nothing today")
+		imgLbl.text = "Aw mann the sky is clear today... :( \n Come back tomorrow!"
 		return  
 		
 	Dialogic.VAR.telescopeTitle = data["title"]
@@ -34,6 +37,7 @@ func getAPI(result, code, headers, body):
 	
 
 func getImage(result, code, headers, body):
+	print("AH")
 	var image = Image.new()
 	if image.load_jpg_from_buffer(body) != OK:
 		image.load_png_from_buffer(body)

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="APIzzaParty"
-run/main_scene="uid://xxymgahi8xl1"
+run/main_scene="uid://t6bd6humq4yy"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,7 +22,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"character": "res://assets/character.dch"
+"Pumpkitty": "res://Pumpkitty.dch",
+"assets/character": "res://assets/character.dch"
 }
 directories/dtl_directory={
 "agify": "res://timelines/agify.dtl",
@@ -36,7 +37,9 @@ layout/style_directory={
 "main": "res://main.tres"
 }
 variables={
+"clicks": 3,
 "countryCode": "n/a",
+"hasPet": false,
 "lastName": "n/a",
 "name": "n/a",
 "predictedAge": 0,
@@ -107,3 +110,7 @@ move_right={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[network]
+
+tls/enable_tls_v1.3=false

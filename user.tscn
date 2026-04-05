@@ -1,7 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dg81l5yc8p6m4"]
+[gd_scene load_steps=8 format=3 uid="uid://dg81l5yc8p6m4"]
 
 [ext_resource type="Script" uid="uid://dbsyuuwasuknh" path="res://user.gd" id="1_xg63p"]
 [ext_resource type="FontFile" uid="uid://c4v3n1ogf7nxd" path="res://assets/rainyhearts.ttf" id="2_7np2n"]
+[ext_resource type="Texture2D" uid="uid://bvw2sdvm68m7d" path="res://assets/backgrounds/userBg.png" id="2_e81rn"]
+[ext_resource type="Script" uid="uid://d0xuqs0sllqb5" path="res://button_2.gd" id="3_mwt1v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnk0f"]
+bg_color = Color(0.36862746, 0.32156864, 0.40392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1usre"]
+bg_color = Color(0.36862746, 0.32156864, 0.40392157, 0.43529412)
 
 [sub_resource type="LabelSettings" id="LabelSettings_mwt1v"]
 font = ExtResource("2_7np2n")
@@ -16,30 +24,65 @@ offset_right = 116.0
 offset_bottom = 93.0
 script = ExtResource("1_xg63p")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.9000001
+anchor_top = -1.25
+anchor_right = -1.9000001
+anchor_bottom = -1.25
+offset_right = 1153.0
+offset_bottom = 640.0
+texture = ExtResource("2_e81rn")
+
 [node name="UserImage" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 253.0
-offset_top = -24.0
-offset_right = 773.0
-offset_bottom = 385.0
+offset_left = 281.0
+offset_top = 80.0
+offset_right = 686.0
+offset_bottom = 405.0
 
 [node name="APIRequest" type="HTTPRequest" parent="."]
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 283.0
-offset_top = 483.0
-offset_right = 659.0
-offset_bottom = 559.0
+offset_left = 361.0
+offset_top = 25.0
+offset_right = 612.0
+offset_bottom = 73.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qnk0f")
+text = "Generate Portrait >"
 
 [node name="ImageRequest" type="HTTPRequest" parent="."]
 
 [node name="UserInfo" type="Label" parent="."]
 layout_mode = 0
-offset_left = 309.0
-offset_top = 399.0
-offset_right = 638.0
-offset_bottom = 462.0
+offset_left = 324.0
+offset_top = 412.0
+offset_right = 653.0
+offset_bottom = 475.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1usre")
 label_settings = SubResource("LabelSettings_mwt1v")
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 485.0
+offset_right = 607.0
+offset_bottom = 522.0
+text = "Back to arcade >"
+script = ExtResource("3_mwt1v")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 38.0
+offset_right = 285.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 12
+text = "Note: only AU, BR, CA, CH, DE, DK, ES, FI, FR, 
+GB, IE, IN, IR, MX, NL, NO, NZ, RS, TR, UA, US 
+nationalities are supported by this API :("
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="Button2" method="_on_button_down"]

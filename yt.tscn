@@ -1,0 +1,113 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkrp3aubg3i6v"]
+
+[ext_resource type="Script" uid="uid://bdtdp8mwp13ye" path="res://yt.gd" id="1_0xjvc"]
+[ext_resource type="Texture2D" uid="uid://78bnoid3xy7y" path="res://assets/backgrounds/ytBg.png" id="2_ljuht"]
+[ext_resource type="FontFile" uid="uid://c4v3n1ogf7nxd" path="res://assets/rainyhearts.ttf" id="3_ctosa"]
+[ext_resource type="Script" uid="uid://d0xuqs0sllqb5" path="res://button_2.gd" id="4_ljuht"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljuht"]
+bg_color = Color(0.69803923, 0.85490197, 0.6666667, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xjvc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 646.0
+texture = ExtResource("2_ljuht")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 458.0
+offset_right = 765.0
+offset_bottom = 541.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.5491816, 0.28617162, 9.62615e-08, 0.6)
+theme_override_fonts/font = ExtResource("3_ctosa")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_ljuht")
+placeholder_text = "Enter Guess:"
+alignment = 1
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(5.091, 16.151, 5.828, 0.384)
+layout_mode = 0
+offset_left = 780.0
+offset_top = 482.0
+offset_right = 885.0
+offset_bottom = 529.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ctosa")
+theme_override_font_sizes/font_size = 27
+text = "Submit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 257.0
+offset_right = 873.0
+offset_bottom = 457.0
+theme_override_fonts/font = ExtResource("3_ctosa")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 128.0
+offset_right = 591.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.627451, 0.30588236, 0.09411765, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.16100001
+anchor_bottom = 0.12100001
+offset_left = 730.0
+offset_top = 76.0
+offset_right = 584.52795
+offset_bottom = 31.591995
+theme_override_colors/font_color = Color(0.62638986, 0.3065158, 0.09480179, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(5.091, 16.151, 5.828, 0.384)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 466.0
+offset_top = 553.0
+offset_right = -470.0
+offset_bottom = -34.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ctosa")
+theme_override_font_sizes/font_size = 25
+text = "back to arcade >"
+script = ExtResource("4_ljuht")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 74.0
+offset_right = 499.0
+offset_bottom = 123.0
+theme_override_colors/font_color = Color(0.6332882, 0.35742202, 8.663535e-07, 1)
+text = "Note: The reported views can be inaccurate compared 
+to the actual amount on youtube"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="button_down" from="Button2" to="Button2" method="_on_button_down"]

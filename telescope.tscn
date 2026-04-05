@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxlwesm06xsa8"]
+[gd_scene load_steps=4 format=3 uid="uid://bxlwesm06xsa8"]
 
 [ext_resource type="Script" uid="uid://c0i82ew2it72i" path="res://telescope.gd" id="1_mi1wi"]
+[ext_resource type="FontFile" uid="uid://c4v3n1ogf7nxd" path="res://assets/rainyhearts.ttf" id="2_vb11p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mipnb"]
+font = ExtResource("2_vb11p")
+font_size = 64
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mi1wi")
@@ -24,6 +29,16 @@ offset_left = -13.0
 offset_top = -6.0
 offset_right = 1232.0
 offset_bottom = 688.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 132.0
+offset_top = 227.0
+offset_right = 443.0
+offset_bottom = 299.0
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_mipnb")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ApiRequest" type="HTTPRequest" parent="."]
 

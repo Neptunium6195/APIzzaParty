@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://t6bd6humq4yy"]
+
+[ext_resource type="Texture2D" uid="uid://c1utimt5hjs6f" path="res://assets/backgrounds/Untitled_Artwork 7.png" id="1_kpexm"]
+[ext_resource type="FontFile" uid="uid://c4v3n1ogf7nxd" path="res://assets/rainyhearts.ttf" id="1_y7k74"]
+[ext_resource type="Script" uid="uid://bns7skv17y1kf" path="res://button.gd" id="2_oyqm6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xoar"]
+bg_color = Color(0.9999997, 0.8224218, 0.4809515, 0.6431373)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -103.0
+offset_right = 1149.0
+offset_bottom = 769.0
+texture = ExtResource("1_kpexm")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 447.0
+offset_top = 543.0
+offset_right = 687.0
+offset_bottom = 618.0
+theme_override_fonts/font = ExtResource("1_y7k74")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_3xoar")
+text = "Press to Start!"
+script = ExtResource("2_oyqm6")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

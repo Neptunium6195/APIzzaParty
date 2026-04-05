@@ -1,5 +1,5 @@
-join  center
+join Pumpkitty right
 [background arg="res://assets/backgrounds/black.png" fade="0.0"]
-What will we see today!
+Pumpkitty: What will we see today!
 [background arg="res://assets/backgrounds/black.png" fade="2.0"]
 [end_timeline]

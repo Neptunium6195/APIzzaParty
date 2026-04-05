@@ -1,11 +1,11 @@
-join  center
+join Pumpkitty right
 if {predictedAge} >= 50.0:
-	Wow! You belong in a museum!
+	Pumpkitty: Wow! You belong in a museum!
 elif {predictedAge} >= 40.0:
-	oooh, that's old...
+	Pumpkitty: oooh, that's old...
 elif {predictedAge} >= 30.0:
-	Did you finish your taxes yet?
+	Pumpkitty: Did you finish your taxes yet?
 elif {predictedAge} >= 20.0:
-	Are you in your prime?
+	Pumpkitty: Are you in your prime?
 else:
-	Enjoy your youth...
+	Pumpkitty: Enjoy your youth...

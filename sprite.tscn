@@ -1,7 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://cuhae7fsu2k5m"]
+[gd_scene load_steps=10 format=3 uid="uid://cuhae7fsu2k5m"]
 
 [ext_resource type="Script" uid="uid://5r34825uiapb" path="res://sprite.gd" id="1_85fgi"]
 [ext_resource type="Texture2D" uid="uid://dbrfreeymt2o5" path="res://assets/sprites/IMG_0114.PNG" id="2_85fgi"]
+[ext_resource type="Texture2D" uid="uid://cryemvdhdk3kq" path="res://assets/sprites/IMG_0147.PNG" id="2_go338"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f78h"]
+atlas = ExtResource("2_go338")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11oj0"]
+atlas = ExtResource("2_go338")
+region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_go338"]
 atlas = ExtResource("2_85fgi")
@@ -13,10 +22,16 @@ region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5f78h"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f78h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11oj0")
+}],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -31,23 +46,21 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7sx8j"]
-radius = 69.0
-height = 212.0
+radius = 68.0
+height = 248.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-collision_layer = 2
+collision_layer = 3
 script = ExtResource("1_85fgi")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(280, 549.99994)
-scale = Vector2(3.0703127, 3.3359373)
+position = Vector2(286, 495.99997)
+scale = Vector2(4.2812505, 4.476562)
 sprite_frames = SubResource("SpriteFrames_5f78h")
-animation = &"new_animation"
-frame_progress = 0.3930962
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(283, 551)
+position = Vector2(297, 508)
 shape = SubResource("CapsuleShape2D_7sx8j")
 
 [node name="Camera2D" type="Camera2D" parent="."]

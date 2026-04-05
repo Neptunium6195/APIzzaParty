@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://yjauau81ja4g"]
+[gd_scene load_steps=8 format=3 uid="uid://yjauau81ja4g"]
 
 [ext_resource type="Script" uid="uid://dii83su7qngi5" path="res://Agify.gd" id="1_udd8w"]
 [ext_resource type="FontFile" uid="uid://s226gfh7qtp0" path="res://assets/Minecraft.ttf" id="2_gb3n8"]
 [ext_resource type="FontFile" uid="uid://c4v3n1ogf7nxd" path="res://assets/rainyhearts.ttf" id="3_k8t5x"]
 [ext_resource type="Script" uid="uid://bns7skv17y1kf" path="res://button.gd" id="4_ubxqs"]
+[ext_resource type="Texture2D" uid="uid://47bbdfols26k" path="res://assets/backgrounds/agifyBg.png" id="5_2drt3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_k8t5x"]
 font = ExtResource("2_gb3n8")
@@ -22,7 +23,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_udd8w")
 
-[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 646.0
+texture = ExtResource("5_2drt3")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -32,12 +37,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_top = -16.0
+offset_right = 94.0
+offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
 label_settings = SubResource("LabelSettings_k8t5x")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="Button" type="Button" parent="."]
 visible = false
