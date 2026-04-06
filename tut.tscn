@@ -1,0 +1,81 @@
+[gd_scene load_steps=10 format=3 uid="uid://cx041nhcv67ur"]
+
+[ext_resource type="Texture2D" uid="uid://s2geo3hp037j" path="res://assets/backgrounds/IMG_0140.PNG" id="1_abbgs"]
+[ext_resource type="Script" uid="uid://bmcjekns2g7sk" path="res://tut.gd" id="1_eg3mw"]
+[ext_resource type="PackedScene" uid="uid://cuhae7fsu2k5m" path="res://sprite.tscn" id="2_eg3mw"]
+[ext_resource type="Script" uid="uid://b4d4irgysynt7" path="res://userBtn.gd" id="3_nvtlc"]
+[ext_resource type="Script" uid="uid://dpyte0vrw4n4r" path="res://natBtn.gd" id="4_sgtmr"]
+[ext_resource type="Script" uid="uid://j4262iwogxsa" path="res://button_3.gd" id="5_jm006"]
+[ext_resource type="Script" uid="uid://bwxqsauyb6rn2" path="res://button_4.gd" id="6_cb4e4"]
+[ext_resource type="Script" uid="uid://cnkbjqeu1qvvj" path="res://button_5.gd" id="7_bf75m"]
+[ext_resource type="Script" uid="uid://c881u34u7aci1" path="res://ytbtn.gd" id="8_qhokb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_eg3mw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-231.64487, 323.94342)
+scale = Vector2(2.7163825, 2.8389223)
+texture = ExtResource("1_abbgs")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_eg3mw")]
+position = Vector2(-4, 0)
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+offset_left = -697.0
+offset_top = 87.0
+offset_right = -556.0
+offset_bottom = 125.0
+text = "User
+"
+script = ExtResource("3_nvtlc")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -880.0
+offset_top = 196.0
+offset_right = -657.0
+offset_bottom = 639.0
+text = "
+"
+script = ExtResource("4_sgtmr")
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 663.0
+offset_top = 200.0
+offset_right = 1049.0
+offset_bottom = 346.0
+script = ExtResource("5_jm006")
+
+[node name="Button4" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -603.0
+offset_top = 348.0
+offset_right = -389.0
+offset_bottom = 631.0
+script = ExtResource("6_cb4e4")
+
+[node name="Button5" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -313.0
+offset_top = 200.0
+offset_right = -83.0
+offset_bottom = 626.0
+script = ExtResource("7_bf75m")
+
+[node name="Button6" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -1135.0
+offset_top = 206.0
+offset_right = -924.0
+offset_bottom = 618.0
+script = ExtResource("8_qhokb")
+
+[connection signal="button_down" from="Button2" to="Button2" method="_on_button_down"]
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_down" from="Button3" to="Button3" method="_on_button_down"]
+[connection signal="button_down" from="Button4" to="Button4" method="_on_button_down"]
+[connection signal="button_down" from="Button5" to="Button5" method="_on_button_down"]
+[connection signal="pressed" from="Button6" to="Button6" method="_on_pressed"]

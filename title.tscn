@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://t6bd6humq4yy"]
+[gd_scene load_steps=7 format=3 uid="uid://t6bd6humq4yy"]
 
 [ext_resource type="Texture2D" uid="uid://c1utimt5hjs6f" path="res://assets/backgrounds/Untitled_Artwork 7.png" id="1_kpexm"]
 [ext_resource type="FontFile" uid="uid://c4v3n1ogf7nxd" path="res://assets/rainyhearts.ttf" id="1_y7k74"]
+[ext_resource type="Script" uid="uid://b7vqes0ggcjeb" path="res://howtoplay.gd" id="2_3xoar"]
 [ext_resource type="Script" uid="uid://bns7skv17y1kf" path="res://button.gd" id="2_oyqm6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpexm"]
+bg_color = Color(1, 0.44313726, 0.3529412, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xoar"]
 bg_color = Color(0.9999997, 0.8224218, 0.4809515, 0.6431373)
@@ -20,6 +24,15 @@ offset_bottom = 769.0
 texture = ExtResource("1_kpexm")
 expand_mode = 1
 
+[node name="Button2" type="Button" parent="."]
+offset_left = 867.0
+offset_top = 21.0
+offset_right = 1044.0
+offset_bottom = 69.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpexm")
+text = "How to play >"
+script = ExtResource("2_3xoar")
+
 [node name="Button" type="Button" parent="."]
 offset_left = 447.0
 offset_top = 543.0
@@ -31,4 +44,5 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3xoar")
 text = "Press to Start!"
 script = ExtResource("2_oyqm6")
 
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

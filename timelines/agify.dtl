@@ -1,4 +1,6 @@
 join Pumpkitty right
+Pumpkitty: Welcome to Agify!
+Pumpkitty: Agify will generate your age based on your first name, so...
 Pumpkitty: What is your name?
 [text_input text="" var="name"]
 [end_timeline]

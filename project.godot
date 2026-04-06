@@ -30,7 +30,8 @@ directories/dtl_directory={
 "agify2": "res://agify2.dtl",
 "nationalize": "res://timelines/nationalize.dtl",
 "telescope": "res://timelines/telescope.dtl",
-"telescope2": "res://telescope2.dtl"
+"telescope2": "res://telescope2.dtl",
+"tutorial": "res://timelines/tutorial.dtl"
 }
 layout/style_directory={
 "": "res://main.tres",

@@ -1,7 +1,8 @@
-res://yt.tscn
+res://timelines/tutorial.dtl
+res://tut.tscn
 res://main.tres
-res://ytbtn.gd
-res://button_2.gd
-res://arcade.tscn
-res://sprite.tscn
-res://sprite.gd
+res://tut.gd
+res://assets/character.dch
+res://timelines/agify.dtl
+res://nationalize.tscn
+res://timelines/nationalize.dtl

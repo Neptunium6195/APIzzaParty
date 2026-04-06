@@ -1,4 +1,6 @@
 join Pumpkitty right
+Pumpkitty: Welcome to Look-a-lizer!
+Pumpkitty: The first part of this game is to input your last name, it will then guess your nationality and randomly generate a picture of someone with the same nationality as you (with some exceptions). So....
 Pumpkitty: What is your last name?
 [text_input text="" var="lastName"]
 [end_timeline]
